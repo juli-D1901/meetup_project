@@ -76,6 +76,7 @@ const eventsStore = [
 // =====================================================
 // RENDER EVENT CARDS
 // =====================================================
+
 const eventsList = document.querySelector("#events-list");
 
 function renderEvents(events) {
@@ -112,11 +113,7 @@ function renderEvents(events) {
               src="${eventItem.image}"
               alt="${eventItem.title}"
             >
-            ${
-              isOnline
-                ? '<span class="event-card__online-badge">📹 Online Event</span>'
-                : ""
-            }
+            
           </div>
 
           <div class="event-card__content">
@@ -129,6 +126,21 @@ function renderEvents(events) {
             <p class="event-card__category">
               ${eventItem.category}${distanceText}
             </p>
+
+            ${
+              isOnline
+                ? `
+                  <span class="event-card__online-badge">
+                    <img
+                      src="./images/icons/Kamera.svg"
+                      alt=""
+                      class="event-icon"
+                    >
+                    <span>Online Event</span>
+                  </span>
+                `
+                : ""
+            }
 
             <p class="event-card__attendees">
               ${eventItem.attendees} attendees

@@ -20,42 +20,49 @@
   </head>
 
   <body>
-    <!-- HEADER -->
+    <!-- =====================================================
+     HEADER
+====================================================== -->
 
     <header class="header">
-      <div class="header__container">
-        <a href="./index.html" class="header__logo">
+      <div class="container header__container">
+        <!-- Logo -->
+        <a href="./index.html" class="logo">
           <img src="./images/page1/Logo.svg" alt="Meetup" />
         </a>
 
-        <form class="header__search" role="search">
-          <label class="search__field">
-            <span class="visually-hidden">Search events</span>
-            <input type="search" name="search" placeholder="Search events" />
-          </label>
+        <!-- Search -->
+        <div class="search">
+          <div class="search__events">
+            <span class="search__icon">⌕</span>
+            <input type="text" placeholder="Search events" />
+          </div>
 
-          <label class="search__field search__field--location">
-            <span class="visually-hidden">Location</span>
-            <input type="text" name="location" value="Mountain View, CA" />
-          </label>
+          <div class="search__location">Mountain View, CA</div>
 
-          <button class="search__button" type="submit" aria-label="Search">
+          <button class="search__button" type="button" aria-label="Search">
             ⌕
           </button>
-        </form>
+        </div>
 
-        <nav class="header__actions" aria-label="User navigation">
-          <button class="header__language" type="button">◉ English</button>
-          <a href="#" class="header__login">Log in</a>
-          <a href="#" class="header__signup">Sign up</a>
-        </nav>
+        <!-- Header actions -->
+        <div class="header__actions">
+          <button class="header__language" type="button">
+            <img src="./images/icons/World.svg" alt="" class="header__globe" />
+            <span>English</span>
+          </button>
+
+          <button class="login" type="button">Log in</button>
+
+          <a href="./events.html" class="signup">Sign up</a>
+        </div>
       </div>
     </header>
-
     <!-- MAIN -->
 
     <main class="events-page">
       <div class="events-layout">
+        
         <!-- EVENTS CONTENT -->
 
         <section class="events-content" aria-labelledby="events-title">

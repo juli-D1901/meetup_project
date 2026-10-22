@@ -21,23 +21,20 @@
 
   <body>
     <!-- =====================================================
-         HEADER
-    ====================================================== -->
+     HEADER
+====================================================== -->
 
     <header class="header">
       <div class="container header__container">
         <!-- Logo -->
-
         <a href="./index.html" class="logo">
           <img src="./images/page1/Logo.svg" alt="Meetup" />
         </a>
 
         <!-- Search -->
-
         <div class="search">
           <div class="search__events">
-            <span class="search__icon"> ⌕ </span>
-
+            <span class="search__icon">⌕</span>
             <input type="text" placeholder="Search events" />
           </div>
 
@@ -49,17 +46,18 @@
         </div>
 
         <!-- Header actions -->
-
         <div class="header__actions">
-          <button class="language" type="button">◉ English</button>
+          <button class="header__language" type="button">
+            <img src="./images/icons/World.svg" alt="" class="header__globe" />
+            <span>English</span>
+          </button>
 
           <button class="login" type="button">Log in</button>
 
-          <a href="./events.html" class="signup"> Sign up </a>
+          <a href="./events.html" class="signup">Sign up</a>
         </div>
       </div>
     </header>
-
     <!-- =====================================================
          MAIN
     ====================================================== -->
@@ -93,8 +91,8 @@
       </section>
 
       <!-- =================================================
-             EVENTS NEAR
-        ================================================== -->
+     EVENTS NEAR
+================================================== -->
 
       <section class="events-section">
         <div class="section-header">
@@ -107,12 +105,12 @@
             </button>
           </div>
 
-          <a href="./events.html" class="see-all"> See all events </a>
+          <a href="./events.html" class="see-all">See all events</a>
         </div>
 
         <div class="events-grid">
+          
           <!-- EVENT 1 -->
-
           <article class="event-card">
             <div class="event-card__image-wrapper">
               <img
@@ -123,19 +121,36 @@
             </div>
 
             <h3>Day Trading Idea and Strategy</h3>
-
             <p class="event-card__category">Business (5 km)</p>
 
-            <p class="event-card__date">▣ MON, MAR 18 · 7:00 PM PDT</p>
+            <p class="event-card__date">
+              <img
+                src="./images/icons/Kalender.svg"
+                alt=""
+                class="event-icon"
+              />
+              MON, MAR 18 · 7:00 PM PDT
+            </p>
 
             <div class="event-card__info">
-              <span>◉ 1 going</span>
-              <span>🎟 Free</span>
+              <span
+                ><img
+                  src="./images/icons/Done.svg"
+                  alt=""
+                  class="event-icon"
+                />1 going</span
+              >
+              <span
+                ><img
+                  src="./images/icons/Ticket.svg"
+                  alt=""
+                  class="event-icon"
+                />Free</span
+              >
             </div>
           </article>
 
           <!-- EVENT 2 -->
-
           <article class="event-card">
             <div class="event-card__image-wrapper">
               <img
@@ -146,19 +161,36 @@
             </div>
 
             <h3>Let's Talk Networking: JPMorgan Chase in Palo Alto</h3>
-
             <p class="event-card__category">Business (25 km)</p>
 
-            <p class="event-card__date">▣ TUE, MAR 19 · 5:00 PM PDT</p>
+            <p class="event-card__date">
+              <img
+                src="./images/icons/Kalender.svg"
+                alt=""
+                class="event-icon"
+              />
+              TUE, MAR 19 · 5:00 PM PDT
+            </p>
 
             <div class="event-card__info">
-              <span>◉ 41 going</span>
-              <span>🎟 Free</span>
+              <span
+                ><img
+                  src="./images/icons/Done.svg"
+                  alt=""
+                  class="event-icon"
+                />41 going</span
+              >
+              <span
+                ><img
+                  src="./images/icons/Ticket.svg"
+                  alt=""
+                  class="event-icon"
+                />Free</span
+              >
             </div>
           </article>
 
-          <!-- EVENT 3 -->
-
+          <!-- EVENT 3 — ONLINE -->
           <article class="event-card">
             <div class="event-card__image-wrapper">
               <img
@@ -166,25 +198,47 @@
                 alt="Tech Talks and Quiz"
                 class="event-card__image"
               />
+
+              <span class="online-badge">
+                <img src="./images/icons/Kamera.svg" alt="" />
+                Online Event
+              </span>
             </div>
 
             <h3>
-              Tech Talks & Quiz: Next-Gen Database Solutions for Emerging Use
-              Cases
+              Tech Talks &amp; Quiz: Next-Gen Database Solutions for Emerging
+              Use Cases
             </h3>
-
             <p class="event-card__category">Technology</p>
 
-            <p class="event-card__date">▣ WED, MAR 13 · 6:00 PM PDT</p>
+            <p class="event-card__date">
+              <img
+                src="./images/icons/Kalender.svg"
+                alt=""
+                class="event-icon"
+              />
+              WED, MAR 13 · 6:00 PM PDT
+            </p>
 
             <div class="event-card__info">
-              <span>◉ 40 going</span>
-              <span>🎟 Free</span>
+              <span
+                ><img
+                  src="./images/icons/Done.svg"
+                  alt=""
+                  class="event-icon"
+                />40 going</span
+              >
+              <span
+                ><img
+                  src="./images/icons/Ticket.svg"
+                  alt=""
+                  class="event-icon"
+                />Free</span
+              >
             </div>
           </article>
 
           <!-- EVENT 4 -->
-
           <article class="event-card">
             <div class="event-card__image-wrapper">
               <img
@@ -195,42 +249,81 @@
             </div>
 
             <h3>INFORMS San Francisco Chapter In-Person Event</h3>
-
             <p class="event-card__category">Health and Wellbeing (50 km)</p>
 
-            <p class="event-card__date">▣ THU, MAR 28 · 5:00 PM PDT</p>
+            <p class="event-card__date">
+              <img
+                src="./images/icons/Kalender.svg"
+                alt=""
+                class="event-icon"
+              />
+              THU, MAR 28 · 5:00 PM PDT
+            </p>
 
             <div class="event-card__info">
-              <span>◉ 41 going</span>
-              <span>🎟 Free</span>
+              <span
+                ><img
+                  src="./images/icons/Done.svg"
+                  alt=""
+                  class="event-icon"
+                />41 going</span
+              >
+              <span
+                ><img
+                  src="./images/icons/Ticket.svg"
+                  alt=""
+                  class="event-icon"
+                />Free</span
+              >
             </div>
           </article>
 
-          <!-- EVENT 5 -->
-
+          <!-- EVENT 5 — ONLINE -->
           <article class="event-card">
             <div class="event-card__image-wrapper">
               <img
                 src="./images/page1/Link (5).png"
-                alt="AI Wednesdays"
+                alt="AI Wednesdays - Meet and Greet"
                 class="event-card__image"
               />
+
+              <span class="online-badge">
+                <img src="./images/icons/Kamera.svg" alt="" />
+                Online Event
+              </span>
             </div>
 
             <h3>AI Wednesdays - Meet and Greet!</h3>
-
             <p class="event-card__category">Technology (5 km)</p>
 
-            <p class="event-card__date">▣ WED, MAR 13 · 6:30 PM PDT</p>
+            <p class="event-card__date">
+              <img
+                src="./images/icons/Kalender.svg"
+                alt=""
+                class="event-icon"
+              />
+              WED, MAR 13 · 6:30 PM PDT
+            </p>
 
             <div class="event-card__info">
-              <span>◉ 29 going</span>
-              <span>🎟 Free</span>
+              <span
+                ><img
+                  src="./images/icons/Done.svg"
+                  alt=""
+                  class="event-icon"
+                />29 going</span
+              >
+              <span
+                ><img
+                  src="./images/icons/Ticket.svg"
+                  alt=""
+                  class="event-icon"
+                />Free</span
+              >
             </div>
           </article>
 
           <!-- EVENT 6 -->
-
           <article class="event-card">
             <div class="event-card__image-wrapper">
               <img
@@ -241,19 +334,36 @@
             </div>
 
             <h3>ROS By-The-Bay 2024</h3>
-
             <p class="event-card__category">Social Activities</p>
 
-            <p class="event-card__date">▣ THU, MAR 21 · 6:00 PM PDT</p>
+            <p class="event-card__date">
+              <img
+                src="./images/icons/Kalender.svg"
+                alt=""
+                class="event-icon"
+              />
+              THU, MAR 21 · 6:00 PM PDT
+            </p>
 
             <div class="event-card__info">
-              <span>◉ 51 going</span>
-              <span>🎟 Free</span>
+              <span
+                ><img
+                  src="./images/icons/Done.svg"
+                  alt=""
+                  class="event-icon"
+                />51 going</span
+              >
+              <span
+                ><img
+                  src="./images/icons/Ticket.svg"
+                  alt=""
+                  class="event-icon"
+                />Free</span
+              >
             </div>
           </article>
 
           <!-- EVENT 7 -->
-
           <article class="event-card">
             <div class="event-card__image-wrapper">
               <img
@@ -264,19 +374,36 @@
             </div>
 
             <h3>Free Christian Singles' Dinner</h3>
-
             <p class="event-card__category">Hobbies and Passions (10 km)</p>
 
-            <p class="event-card__date">▣ FRI, MAR 29 · 6:00 PM PDT</p>
+            <p class="event-card__date">
+              <img
+                src="./images/icons/Kalender.svg"
+                alt=""
+                class="event-icon"
+              />
+              FRI, MAR 29 · 6:00 PM PDT
+            </p>
 
             <div class="event-card__info">
-              <span>◉ 11 going</span>
-              <span>🎟 Free</span>
+              <span
+                ><img
+                  src="./images/icons/Done.svg"
+                  alt=""
+                  class="event-icon"
+                />11 going</span
+              >
+              <span
+                ><img
+                  src="./images/icons/Ticket.svg"
+                  alt=""
+                  class="event-icon"
+                />Free</span
+              >
             </div>
           </article>
 
           <!-- EVENT 8 -->
-
           <article class="event-card">
             <div class="event-card__image-wrapper">
               <img
@@ -287,33 +414,49 @@
             </div>
 
             <h3>In-person: Deep Dive into RAG Architectures (Food served)</h3>
-
             <p class="event-card__category">Hobbies and Passions (50 km)</p>
 
-            <p class="event-card__date">▣ THU, MAR 14 · 5:00 PM PDT</p>
+            <p class="event-card__date">
+              <img
+                src="./images/icons/Kalender.svg"
+                alt=""
+                class="event-icon"
+              />
+              THU, MAR 14 · 5:00 PM PDT
+            </p>
 
             <div class="event-card__info">
-              <span>◉ 16 going</span>
-              <span>🎟 Free</span>
+              <span
+                ><img
+                  src="./images/icons/Done.svg"
+                  alt=""
+                  class="event-icon"
+                />16 going</span
+              >
+              <span
+                ><img
+                  src="./images/icons/Ticket.svg"
+                  alt=""
+                  class="event-icon"
+                />Free</span
+              >
             </div>
           </article>
         </div>
       </section>
 
       <!-- =================================================
-             UPCOMING ONLINE EVENTS
-        ================================================== -->
+     UPCOMING ONLINE EVENTS
+================================================== -->
 
       <section class="events-section online-events-section">
         <div class="section-header">
           <h2>Upcoming online events</h2>
-
-          <a href="./events.html" class="see-all"> See all events </a>
+          <a href="./events.html" class="see-all">See all events</a>
         </div>
 
         <div class="events-grid">
           <!-- ONLINE 1 -->
-
           <article class="event-card">
             <div class="event-card__image-wrapper">
               <img
@@ -322,25 +465,45 @@
                 class="event-card__image"
               />
 
-              <span class="online-badge"> ▣ Online Event </span>
+              <span class="online-badge">
+                <img src="./images/icons/Kamera.svg" alt="" />
+                Online Event
+              </span>
             </div>
 
             <h3>
               Amazing On-Demand 15 Min Interviews with Top Coaches and Speakers
             </h3>
-
             <p class="event-card__category">Business (25 km)</p>
 
-            <p class="event-card__date">▣ THU, MAR 14 · 6:00 PM PDT</p>
+            <p class="event-card__date">
+              <img
+                src="./images/icons/Kalender.svg"
+                alt=""
+                class="event-icon"
+              />
+              THU, MAR 14 · 6:00 PM PDT
+            </p>
 
             <div class="event-card__info">
-              <span>◉ 3 going</span>
-              <span>🎟 Free</span>
+              <span
+                ><img
+                  src="./images/icons/Done.svg"
+                  alt=""
+                  class="event-icon"
+                />3 going</span
+              >
+              <span
+                ><img
+                  src="./images/icons/Ticket.svg"
+                  alt=""
+                  class="event-icon"
+                />Free</span
+              >
             </div>
           </article>
 
           <!-- ONLINE 2 -->
-
           <article class="event-card">
             <div class="event-card__image-wrapper">
               <img
@@ -349,23 +512,43 @@
                 class="event-card__image"
               />
 
-              <span class="online-badge"> ▣ Online Event </span>
+              <span class="online-badge">
+                <img src="./images/icons/Kamera.svg" alt="" />
+                Online Event
+              </span>
             </div>
 
             <h3>Vision Pro Developers Online Meetup</h3>
-
             <p class="event-card__category">Technology</p>
 
-            <p class="event-card__date">▣ WED, MAR 13 · 7:00 PM PDT</p>
+            <p class="event-card__date">
+              <img
+                src="./images/icons/Kalender.svg"
+                alt=""
+                class="event-icon"
+              />
+              WED, MAR 13 · 7:00 PM PDT
+            </p>
 
             <div class="event-card__info">
-              <span>◉ 51 going</span>
-              <span>🎟 Free</span>
+              <span
+                ><img
+                  src="./images/icons/Done.svg"
+                  alt=""
+                  class="event-icon"
+                />51 going</span
+              >
+              <span
+                ><img
+                  src="./images/icons/Ticket.svg"
+                  alt=""
+                  class="event-icon"
+                />Free</span
+              >
             </div>
           </article>
 
           <!-- ONLINE 3 -->
-
           <article class="event-card">
             <div class="event-card__image-wrapper">
               <img
@@ -374,23 +557,43 @@
                 class="event-card__image"
               />
 
-              <span class="online-badge"> ▣ Online Event </span>
+              <span class="online-badge">
+                <img src="./images/icons/Kamera.svg" alt="" />
+                Online Event
+              </span>
             </div>
 
             <h3>Significant Musical Moments</h3>
-
             <p class="event-card__category">Hobbies and Passions (10 km)</p>
 
-            <p class="event-card__date">▣ WED, MAR 13 · 6:00 PM PDT</p>
+            <p class="event-card__date">
+              <img
+                src="./images/icons/Kalender.svg"
+                alt=""
+                class="event-icon"
+              />
+              WED, MAR 13 · 6:00 PM PDT
+            </p>
 
             <div class="event-card__info">
-              <span>◉ 16 going</span>
-              <span>🎟 Free</span>
+              <span
+                ><img
+                  src="./images/icons/Done.svg"
+                  alt=""
+                  class="event-icon"
+                />16 going</span
+              >
+              <span
+                ><img
+                  src="./images/icons/Ticket.svg"
+                  alt=""
+                  class="event-icon"
+                />Free</span
+              >
             </div>
           </article>
 
           <!-- ONLINE 4 -->
-
           <article class="event-card">
             <div class="event-card__image-wrapper">
               <img
@@ -399,18 +602,39 @@
                 class="event-card__image"
               />
 
-              <span class="online-badge"> ▣ Online Event </span>
+              <span class="online-badge">
+                <img src="./images/icons/Kamera.svg" alt="" />
+                Online Event
+              </span>
             </div>
 
             <h3>FREE Webinar: Introduction to Power BI</h3>
-
             <p class="event-card__category">Technology</p>
 
-            <p class="event-card__date">▣ THU, MAR 14 · 5:30 PM PDT</p>
+            <p class="event-card__date">
+              <img
+                src="./images/icons/Kalender.svg"
+                alt=""
+                class="event-icon"
+              />
+              THU, MAR 14 · 5:30 PM PDT
+            </p>
 
             <div class="event-card__info">
-              <span>◉ 33 going</span>
-              <span>🎟 Free</span>
+              <span
+                ><img
+                  src="./images/icons/Done.svg"
+                  alt=""
+                  class="event-icon"
+                />33 going</span
+              >
+              <span
+                ><img
+                  src="./images/icons/Ticket.svg"
+                  alt=""
+                  class="event-icon"
+                />Free</span
+              >
             </div>
           </article>
         </div>
@@ -784,16 +1008,18 @@
           </div>
 
           <div class="footer__apps">
-            <a href="#">
+            <a href="#" aria-label="Google Play">
               <img
                 src="./images/page1/download_en-US.svg fill.png"
-                alt="Google Play"
+                alt="Get it on Google Play"
               />
             </a>
 
-            <a href="#" class="app-store-button">
-              Download on the
-              <strong>App Store</strong>
+            <a href="#" aria-label="App Store">
+              <img
+                src="./images/page1/Link - Download app from Google Play → download_en-US.svg.png"
+                alt="Download on the App Store"
+              />
             </a>
           </div>
         </div>
