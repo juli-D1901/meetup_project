@@ -646,129 +646,190 @@ img {
   background-color: #f6f7f8;
 }
 
-/* =====================================================
+/* =========================================================
    FOOTER
-===================================================== */
+========================================================= */
 
 .footer {
   width: 100%;
-  padding: 28px 0 24px;
-
-  background-color: var(--color-footer);
-  color: #eeeeee;
+  padding: 32px 0 48px;
+  box-sizing: border-box;
+  background-color: #212121;
+  color: #f6f6f6;
 }
 
 .footer__container {
-  width: min(var(--container-width), calc(100% - 48px));
+  width: calc(100% - 48px);
+  max-width: 974px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
+
+/* Верхняя строка */
 
 .footer__top {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 56px;
+  padding-bottom: 32px;
+}
 
-  padding-bottom: 20px;
-
-  font-size: 13px;
+.footer__top span {
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 600;
 }
 
 .footer__button {
-  display: inline-flex;
+  width: 119px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
   align-items: center;
   justify-content: center;
-
-  min-height: 34px;
-  padding: 0 16px;
-
-  border: 1px solid #ffffff;
-  border-radius: 5px;
-
-  color: #ffffff;
-  white-space: nowrap;
+  box-sizing: border-box;
+  border: 2px solid #f6f6f6;
+  border-radius: 6px;
+  color: #f6f6f6;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .footer__button:hover {
-  background-color: #333333;
+  background-color: #f6f6f6;
+  color: #212121;
 }
 
-.footer__divider {
+.footer__line {
+  width: 100%;
   height: 1px;
-  margin-bottom: 22px;
-
-  background-color: #444444;
+  background-color: #5a5a5a;
 }
+
+/* Три колонки */
 
 .footer__columns {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 32px;
+  margin-top: 32px;
 }
 
 .footer__column {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 5px;
-
-  font-size: 12px;
+  gap: 12px;
 }
 
-.footer__column h2 {
-  margin-bottom: 2px;
-
-  font-size: 13px;
-  font-weight: 500;
+.footer__column h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
 }
 
 .footer__column a {
   color: #c5c5c5;
+  font-size: 14px;
+  line-height: 1.4;
+  text-decoration: none;
 }
 
 .footer__column a:hover {
   color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Социальные сети и магазины приложений */
+
+.footer__middle {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-top: 48px;
 }
 
 .footer__social {
-  margin-top: 30px;
-}
-
-.footer__social > p {
-  margin-bottom: 10px;
-
-  font-size: 13px;
-}
-
-.footer__social-links {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 20px;
 }
 
-.footer__social-links a {
-  color: #d5d5d5;
-  font-size: 11px;
+.footer__social > span {
+  font-size: 16px;
+  line-height: 1.4;
 }
 
-.footer__social-links a:hover {
-  color: #ffffff;
+.footer__social-icons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
+
+.footer__social-icons a {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__social-icons img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.footer__apps {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer__apps a {
+  width: 140px;
+  height: 40px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.footer__apps img {
+  display: block;
+  width: 140px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Нижняя строка */
 
 .footer__legal {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 14px 22px;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 76px;
+  white-space: nowrap;
+}
 
-  margin-top: 30px;
-
+.footer__legal span,
+.footer__legal a {
   color: #c5c5c5;
-  font-size: 11px;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+  text-decoration: none;
 }
 
-.footer__legal span {
-  color: #eeeeee;
+.footer__legal a:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
+
 
 /* =====================================================
    RESPONSIVE LAYOUT — TABLET
@@ -1560,4 +1621,19 @@ img {
 /* Исправление скрытия карточек при фильтрации */
 .event-card[hidden] {
   display: none !important;
+}
+
+/* Камера и Online Event в одну строку */
+.event-card__online-badge {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+}
+
+.event-card__online-badge .event-icon {
+  display: inline-block !important;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin: 0;
 }

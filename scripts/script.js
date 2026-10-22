@@ -3,11 +3,40 @@
 // 0. EVENTS DATA
 // =====================================================
 
+// Создаём дату относительно сегодняшнего дня
+function dateFromToday(days, hours, minutes = 0) {
+  const date = new Date();
+
+  date.setDate(date.getDate() + days);
+  date.setHours(hours, minutes, 0, 0);
+
+  return date;
+}
+
+// Находим ближайший будущий день недели
+function nextWeekendDay(dayOfWeek, hours, minutes = 0) {
+  const now = new Date();
+  const date = new Date(now);
+
+  date.setHours(hours, minutes, 0, 0);
+
+  const daysUntil = (dayOfWeek - now.getDay() + 7) % 7;
+
+  date.setDate(now.getDate() + daysUntil);
+
+  // Если указанное время уже прошло, переносим мероприятие на следующую неделю
+  if (date <= now) {
+    date.setDate(date.getDate() + 7);
+  }
+
+  return date;
+}
+
 const eventsStore = [
   {
     title: "INFJ Personality Type - Coffee Shop Meet & Greet",
     description: "Being an INFJ",
-    date: new Date(2024, 2, 23, 15),
+    date: dateFromToday(0, 15),
     image:
       "https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1037&auto=format&fit=crop",
     type: "offline",
@@ -19,7 +48,7 @@ const eventsStore = [
     title:
       "NYC AI Users - AI Tech Talks, Demo & Social: RAG Search and Customer Experience",
     description: "New York AI Users",
-    date: new Date(2024, 2, 23, 11, 30),
+    date: dateFromToday(1, 11, 30),
     image:
       "https://images.unsplash.com/photo-1696258686454-60082b2c33e2?q=80&w=870&auto=format&fit=crop",
     type: "offline",
@@ -30,7 +59,7 @@ const eventsStore = [
   {
     title: "Book 40+ Appointments Per Month Using AI and Automation",
     description: "New Jersey Business Network",
-    date: new Date(2024, 2, 16, 14),
+   date: nextWeekendDay(6, 14),
     image:
       "https://images.unsplash.com/photo-1674027444485-cec3da58eef4?q=80&w=1032&auto=format&fit=crop",
     type: "online",
@@ -41,7 +70,7 @@ const eventsStore = [
   {
     title: "Dump writing group weekly meetup",
     description: "Dump writing group",
-    date: new Date(2024, 2, 13, 11),
+    date: nextWeekendDay(0, 11),
     image:
       "https://plus.unsplash.com/premium_photo-1678453146992-b80d66df9152?q=80&w=870&auto=format&fit=crop",
     type: "online",
@@ -52,7 +81,7 @@ const eventsStore = [
   {
     title: "Over 40s, 50s, & 60s Senior Singles Chat, Meet & Dating Community",
     description: "Over 40s, 50s, & 60s Singles Chat, Meet & Dating Community",
-    date: new Date(2024, 2, 14, 11),
+    date: dateFromToday(4, 11),
     image:
       "https://plus.unsplash.com/premium_photo-1706005542509-a460d6efecb0?q=80&w=870&auto=format&fit=crop",
     type: "online",
@@ -63,7 +92,7 @@ const eventsStore = [
   {
     title: "All Nations - Manhattan Missions Church Bible Study",
     description: "Manhattan Bible Study Meetup Group",
-    date: new Date(2024, 2, 14, 11),
+    date: dateFromToday(6, 11),
     image:
       "https://plus.unsplash.com/premium_photo-1679488248784-65a638a3d3fc?q=80&w=870&auto=format&fit=crop",
     type: "offline",
@@ -113,7 +142,7 @@ function renderEvents(events) {
               src="${eventItem.image}"
               alt="${eventItem.title}"
             >
-            
+
           </div>
 
           <div class="event-card__content">
